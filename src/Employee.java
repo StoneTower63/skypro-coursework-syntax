@@ -36,4 +36,20 @@ public class Employee {
         this.salary = salary;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Double.compare(employee.salary, salary) == 0;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + "; ФИО: " + fullName + "; Отдел: " + department + "; Зарплата: " + salary;
+    }
+
+    public void printShortInfo(){
+        System.out.println("ФИО: " + fullName + "; Зарплата: " + salary);
+    }
 }

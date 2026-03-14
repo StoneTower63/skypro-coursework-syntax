@@ -20,7 +20,9 @@ public class EmployeeBook {
                 count++;
             }
         }
-        return sum / count;
+        if (count == 0) {
+            return 0;
+        } else return sum / count;
     }
 
     public void printTaxes(String type) {
